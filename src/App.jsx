@@ -1,6 +1,4 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { useState, } from "react";
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navigation from "./components/nav";
@@ -8,6 +6,13 @@ import OwnerPage from "./components/owner";
 import HomePage from "./components/Home";
 import { AdminComponent } from "./components/admin";
 import { UserComponent } from "./components/user";
+
+export default function App() {
+
+const [user, setUser] = useState([]);
+function addUser(newUser){
+  setUser([...user, {...newUser, userID: `UID_${user.length} + 1`}]);
+}
 
 const router = createBrowserRouter([
   {
@@ -33,7 +38,7 @@ const router = createBrowserRouter([
     element: (
       <div>
         <Navigation />
-        <UserComponent />
+        <UserComponent user={addUser} />
       </div>
     ),
   },
@@ -42,13 +47,13 @@ const router = createBrowserRouter([
     element: (
       <div>
         <Navigation />
-        <AdminComponent />
+        <AdminComponent addUser={addUser} />
+
       </div>
     ),
   },
 ]);
 
-export default function App() {
   return (
     <>
       <RouterProvider router={router} />

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function HomePage() {
     return (
         <div className="flex flex-col h-screen bg-gray-300 items-center">
-            <div className="flex flex-col justify-center my-6">
+            <div className="flex flex-col justify-center my-6 text-center ">
                 <h1 className="text-3xl font-bold">
                     Generation Thailand <br /> React - Assessment
                 </h1>

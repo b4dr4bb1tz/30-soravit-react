@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export function UserComponent(){
     return(
-        <div className="flex flex-col h-screen bg-gray-300 items-center">
+        <div className="flex flex-col h-screen bg-gray-300 items-center text-center">
             <div className="flex flex-col justify-center my-6">
                 <h1 className="text-3xl font-bold">
                     Generation Thailand <br /> User Section
