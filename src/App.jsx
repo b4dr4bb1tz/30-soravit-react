@@ -1,4 +1,4 @@
-import { useState, } from "react";
+import react,{ useState, } from "react";
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navigation from "./components/nav";
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
     element: (
       <div>
         <Navigation />
-        <UserComponent user={addUser} />
+        <UserComponent addUser={addUser} />
       </div>
     ),
   },

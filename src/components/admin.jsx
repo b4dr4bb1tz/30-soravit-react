@@ -7,6 +7,9 @@ export function AdminComponent({ addUser }) {
     const [position, setPosition] = useState("");
     const [users, setUsers] = useState([]);
 
+
+    
+
     function handleSubmit(event) {
         event.preventDefault();
         const newUser = { id: Date.now(), name, lastName, position };
